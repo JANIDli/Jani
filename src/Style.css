@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Ga+Maamli&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Lobster&display=swap');
+/* Hero */
+.hero-container {
+    display: grid;
+    grid-template-rows: repeat(3, auto); /* 3 rows with auto height */
+    grid-template-columns: 1fr; /* 1 column that takes up full width */
+    gap: 1rem;
+    padding: 130px;
+    background-image: url(/public/b2.jpg);
+    background-size: cover;
+    background-blend-mode: overlay; /* Optional: Blend mode for the background */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-container .header h1,
+.hero-container .position h2,
+.hero-container .CV {
+    grid-column: 1; /* Span all columns (1 / -1 spans all columns in a more flexible manner) */
+    text-align: center;
+}
+.header h1{
+}
+.nav-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for navigation */
+    backdrop-filter: blur(10px); 
+    padding: 20px;
+}
+.nav-band a{
+    font-family: "Lobster", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: aqua;
+}
+
+.position h2{
+    font-family: "Acme", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.cv-btn{
+    background-color: rgb(0, 255, 242);
+    padding-left: 20px;
+    color: black;
+}
+
+/* img-container*/
+
+.img-container{
+    display: flex;
+}
+
+/*service-container */
+
+.service-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    height: 100%;
+    width: 100%;
+}
+.Tab-container{
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+}
+
+.web{
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+
+}
+.graphic{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+
+}
+
+.glow-on-hover {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.graphic-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.img1 {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.img1 img {
+  width: 100%;
+  height: auto;
+}
+
+.view-site-btn {
+  position: absolute;
+  z-index: 1;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Button background for visibility */
+  color: rgb(212, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+.web-container{
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.footer {
+  background-color: #333; /* Dark background */
+  color: white; /* White text */
+  padding: 20px 0; /* Top and bottom padding */
+  text-align: center; /* Center text */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.social-links {
+  margin-top: 10px; /* Space above social links */
+}
+
+.social-links a {
+  color: white; /* White icons */
+  margin: 0 10px; /* Space between icons */
+  text-decoration: none; /* Remove underline */
+}
+
+.social-links a:hover {
+  color: #ddd; /* Change color on hover */
+}
+
+/* Font Awesome Icons */
+.fab {
+  font-size: 24px; /* Adjust icon size */
+}
